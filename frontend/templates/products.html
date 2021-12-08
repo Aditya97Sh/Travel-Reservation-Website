@@ -1,0 +1,12 @@
+{% load static %}
+{% for x in productss %}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <img src="{% static x.image.url %}">
+    <h5 class="card-title">{{x.productname}}</h5>
+    <p class="card-text">{{x.description}}</p>
+    <p class="card-text">Price - {{x.price}}</p>
+    <a href="#" class="btn btn-primary">Buy Now</a>
+  </div>
+</div>
+{% endfor %}
